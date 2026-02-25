@@ -25,5 +25,5 @@ def consoles():
 # o arroba faz com que a rota 0 chame a função home
 #iniciando um server web local, como apache o xampp
 if __name__ == '__main__':# main seria o arquivo principal, tipo o index
-    app.run(debug=True)#.run inicia um servidor
+    app.run(debug=True)#.run inicia um servidor, modo de depuração = verdadeiro
     # Caso app.py for o arquivo principal o servidor se inicia
