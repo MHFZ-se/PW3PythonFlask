@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% block content %} 
+<main>
+    <!-- para demonstrar/exibir uma variavel no ptthon é nescessario colocar o nome entre {#{}#} chaves duplas duas vezes
+    o pacote que permite a exibição de variaveis python no html é o jinja 2 
+    serve apenas para var
+    para codigos é:}-->
+    <h1>Jogos em destaque</h1>
+    <hr>
+    <ul>
+        <li>Titulo: {{ titulo }}</li>
+        <li>Ano {{ ano }}</li>
+        <li>Categoria: {{ categoria }}</li>
+        
+    </ul>
+    <p>O game {{titulo}} tem {{2026-ano}} anos de idade</p>
+    <!-- For para exibir listas(vetors) -->
+    <h3>Top players -Ranking </h3>
+    <ol>
+        {% for jogador in jogadores%}
+        <li>{{jogador}}</li>
+        {% endfor %}
+    </ol>
+
+    <hr>
+    <!-- For para exibir objeto(dicionario) -->
+    <h3>JOJO do ano</h3>
+    <!-- O .items() especifica ques estamos chamando os itens, chave + valor -->
+    {% for chave, valor in jogo.items()%}
+    <details>
+        <summary>{{chave}}</summary>
+        <summary>{{valor}}</summary>
+    </details>
+    {% endfor %}
+    <p><a href="/">Voltar</a></p>
+</main>
+{% endblock content %}

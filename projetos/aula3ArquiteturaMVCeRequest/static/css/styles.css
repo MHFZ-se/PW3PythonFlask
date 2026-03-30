@@ -1,0 +1,46 @@
+/* * funciona como seletor universal */
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: 'Segoe UI';
+    color: #222;
+    background-color: aliceblue;
+    line-break: 1.6;
+}
+
+ header { /* cabeçalho */
+    background-color: black;
+    color: white;
+    padding: 0.5rem;    
+    text-align: center;
+}
+/* rodape */
+footer {
+    background-color: #1b1b1b;
+    color: white;
+    margin-top: 2rem;
+    padding: 1rem 0.75rem;
+
+
+}
+
+main {
+    width: 1300px;
+    min-height: 100vh;
+    margin: 1.5rem auto;
+    padding: 1rem 3rem;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+}
+
+img {
+    border-radius: 8px;
+
+}
+
+h1,h2,h3,h4,p {
+    padding: 10px;
+}
