@@ -1,10 +1,8 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pagina central</title>
-</head>
+{% extends 'base.html' %}
+
+{% block content %} <!--isto indica o uso de um codigo .py-->
+
+<main>
 <body>
     <h2>Top 20 linguagens de todos os tempos <h6>na minha opiniao</h6> </h2><br>
     <h3>10 javascrip, superestima</h3><br>
@@ -20,5 +18,6 @@
     <a href="/"></a>  
     <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
     <h3>0 Scrat</h3><br>
-</body>
-</html>
+
+</main>
+{% endblock content %}
