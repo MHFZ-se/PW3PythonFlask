@@ -2,6 +2,8 @@ from flask import render_template, request, redirect, url_for
 
 def init_app(app):
     
+    listaLinguagem = [{"linguagem" : "C", "porque" : "Legal", "resposta" : "A efemera existência"}]
+    
     @app.route('/')
     def home():
         return render_template('index.html')
@@ -12,6 +14,13 @@ def init_app(app):
         return render_template('lista.html',
                                linguagens = linguagens)
 
-    @app.route('/formulario')
+    @app.route('/formulario', methods = ["GET","POST"])
     def formulario():
-        return render_template('formulario.html')
+        if request.method == 'POST':
+            listaLinguagem.append({
+                'linguagem': request.form.get('linguagem'),
+                'porque': request.form.get('porque'),
+                'resposta': request.form.get('resposta')})
+            return redirect(url_for('formulario'))
+        
+        return render_template('formulario.html', listaLinguagem = listaLinguagem)
