@@ -11,9 +11,10 @@
         <li>Titulo: {{ titulo }}</li>
         <li>Ano {{ ano }}</li>
         <li>Categoria: {{ categoria }}</li>
+        
     </ul>
-    <p>O game {{titulo}} tem</p>
-
+    <p>O game {{titulo}} tem {{2026-ano}} anos de idade</p>
+    <!-- For para exibir listas(vetors) -->
     <h3>Top players -Ranking </h3>
     <ol>
         {% for jogador in jogadores%}
@@ -21,6 +22,16 @@
         {% endfor %}
     </ol>
 
+    <hr>
+    <!-- For para exibir objeto(dicionario) -->
+    <h3>JOJO do ano</h3>
+    <!-- O .items() especifica ques estamos chamando os itens, chave + valor -->
+    {% for chave, valor in jogo.items()%}
+    <details>
+        <summary>{{chave}}</summary>
+        <summary>{{valor}}</summary>
+    </details>
+    {% endfor %}
     <p><a href="/">Voltar</a></p>
 </main>
 {% endblock content %}
