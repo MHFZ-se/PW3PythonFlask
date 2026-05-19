@@ -91,7 +91,7 @@ def init_app(app):
     
     @app.route("/estoque-consoles", methods=['GET','POST'])
     @app.route("/estoque-consoles/delete/<int:id>")
-    def estoque_consoles():
+    def estoque_consoles(id=None):
         if id:
             console = Console.query.get(id)
             
@@ -112,5 +112,5 @@ def init_app(app):
             db.session.commit()
             return redirect(url_for('estoque_consoles'))
         consoles = Console.query.all()
-        return render_template('/estoque-consoles.html')
+        return render_template('/estoque-consoles.html', consoles = consoles)
     

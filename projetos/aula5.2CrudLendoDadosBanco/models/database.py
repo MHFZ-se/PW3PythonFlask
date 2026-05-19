@@ -33,7 +33,7 @@ class Console(db.Model):
     preco = db.Column(db.Float)
     quantidade = db.Column(db.Integer)
     
-    def __init__(self, nome, fabricante, ano, preco,quantidade):
+    def __init__(self, nome, ano, fabricante, preco,quantidade):
         self.id = id
         self.nome = nome
         self.ano = ano 
